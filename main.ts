@@ -32,7 +32,7 @@ basic.forever(function () {
         basic.pause(100)
     } else if (IR.IR_read() == 21) {
         music.playTone(698, music.beat(BeatFraction.Eighth))
-    } else if (maqueen.Ultrasonic(null) == 10) {
+    } else if (maqueen.Ultrasonic(PingUnit.Centimeters) <= 10) {
         maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 0)
         maqueen.writeLED(maqueen.LED.LEDRight, maqueen.LEDswitch.turnOff)
         maqueen.writeLED(maqueen.LED.LEDLeft, maqueen.LEDswitch.turnOff)
